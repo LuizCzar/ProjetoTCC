@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.logo img {
+    width: 150px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #3b3b3b;
+}
+
+form { 
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 18px;
+    color: #333;
+}
+
+select{
+    padding: 2px;
+    border-radius: 5px;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 18px;
+    width: 340px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #0d6efd;
+}
+
+button {
+    font-weight: 500;
+    width: 100%;
+    padding: 8px;
+    background: #0d6efd;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0b5ed7;
+}
+
+.link {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.link a {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+    .link a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #777;
+}
+
+/* EDITAR PERFIL*/
+textarea{
+    max-width: 335px;
+    max-height: 100px;
+    padding: 4px;
+}
+
+.imagem{
+    align-self: center;
+    justify-items: center;
+    
+}
+.salvar{
+    width: 150px;
+}
+
+#preview{
+    border-radius: 50%;
+    display:none;
+    width:110px;
+    margin-bottom: 5px;
+    width: 90px;
+    height: 90px;
+    border: 2px solid #313131;
+} 
+
+.upload-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.upload-btn:hover {
+    background: #005ec7;
+}
+
+#voltar-perfil{
+    text-align: center;
+}
+#voltar-perfil img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+#voltar-perfil img:hover{
+    box-shadow: 0 0 25px rgba(228, 0, 0, 0.8);
+}
+
+/* Botão do add projeto para criar e apagar um time */
+.ctime{
+    font-size: 18px;
+    text-decoration: none;
+    padding: 0px 4px;
+    margin-left: 3px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.rtime{
+    width: 18px;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1px 6px;
+    padding-bottom: 2px;
+    margin-left: 3px;
+    border: none;
+    background: rgb(247, 18, 18);
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.rtime:hover{
+    width: 18px;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1px 6px;
+    padding-bottom: 2px;
+    margin-left: 3px;
+    border: none;
+    background: rgb(207, 1, 1);
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+#meuPopup{
+
+    width: 270px;
+    height: 160px;
+    padding: 10px;
+    border-radius: 15px;
+    border: 0;
+    align-self:  center;
+    justify-self: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+#meuPopup p{
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+#meuPopup div{
+    height: 75px;
+    text-align: center;
+    align-content: center;
+}
+
+#meuPopup span{
+    font: normal bold 30px/1.5 Arial, sans-serif;
+    justify-self: center;
+    text-align: center;
+}
+
+#meuPopup button{
+    width: 115px;
+    margin: 0px 3px;
+}
+
+#desc{
+    width: 335px;
+}
+
+/* RELACIONADO A PAGINA DE CRIAÇÂO DE EQUIPE*/
+#addt{
+    width: 45px;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 4px 8px;
+    margin-left: 3px;
+    margin-top: 25px;
+    border: none;
+    background: #027e17;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+#addt:hover{
+    background: #01520f;
+}
+
+#membro-conf{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.balao{
+    display: flex;
+    align-items: center;
+    background-color: #494949; 
+    color: white;
+    width: min-content;
+    padding: 4px 15px;
+    margin: 2px;
+    border-radius: 25px;
+    font: bold 14px/1.5 Arial, sans-serif;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.balao button{
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    margin-left: 5px;
+    font: italic bold 18px/1.5 Arial, sans-serif;
+}
+.balao button:hover{
+    color: rgb(250, 42, 42);
+}

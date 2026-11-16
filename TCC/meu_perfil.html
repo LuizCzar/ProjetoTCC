@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="shortcut icon" href="Img/logo/019125-removebg-preview.png" type="img/x-icon">
+    <title>Meu perfil | LinkIFBA</title>
+</head>
+<body>
+
+    <header>
+    <a href="index.html"> <img class="logo" src="img/logo/logo-comp2.png" alt="logo-comp2"> </a>
+    </header>
+
+    <main class="container">
+
+        <!-- COLUNA ESQUERDA: PERFIL -->
+        <aside class="profile-card">
+            <a class="out" href="login.html"><img  src="img/social/porta-aberta.png" alt=""></a>
+            <div id="avatar"></div>
+            <div class="apelido">
+            <h2 id="nome"></h2><a href="editar_perfil.html"> <img class="editar" src="img/social/caneta.png" alt="icon da caneta"></a>
+            </div>
+            <p class="role" id="turma"></p>
+            <p class="university" id="turno"></p>
+            <p class="bio" id="bio"></p>
+            <br>
+            <div >
+                <h3 class="contato">CONTATOS <a href="add_contato.html">+</a></h3>
+                <div class="social">
+                    <img src="img/social/placa-do-github.png" alt="git hub"><p id="git">Não informado</p>
+                </div>
+                <div class="social">
+                    <img src="img/social/enviar.png" alt="gmail"><p id="gmail">Não informado</p>
+                </div>
+                <div class="social">
+                    <img src="img/social/instagram.png" alt="instagram"><p id="insta">Não informado</p>
+                </div>
+                <div class="social">
+                    <img src="img/social/whatsapp.png" alt="whatsapp"><p id="whats">Não informado</p>
+                </div>
+                <div class="social">
+                    <img src="img/social/facebook.png" alt="facebook"><p id="face">Não informado</p>
+                </div>
+
+            </div>
+        </aside>
+
+        <!-- COLUNA DIREITA -->
+        <section class="content">
+
+            <!-- PROJETOS -->
+             <h3>Meus Projetos</h3> 
+
+            <div id="project-grid" class="project-grid"></div>
+            <dialog id="meuPopup">
+                <p>Deseja mesmo apagar o projeto?</p>
+                <div >
+                <span id="nomePjt"></span>
+                </div>
+                <button type="button" onclick="document.getElementById('meuPopup').close()">Cancelar</button>
+                <button type="button" id="apagar">Apagar</button>
+            </dialog>
+
+            <!-- SKILLS -->
+            <h3>Habilidades</h3>
+
+            <div id="habil" class="skills"></div>
+
+
+        </section>
+
+    </main>
+
+    <footer>
+        © 2024-2026 LinkIFBA
+    </footer>
+
+</body>
+
+<script src="script.js" ></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        showPerfil();
+    });
+
+    var id_pjt;
+    document.getElementById("project-grid").addEventListener("click", function(e) {
+        const excluir = e.target.closest(".excProjeto");
+        if (excluir) {
+            
+            id_pjt = excluir.dataset.id;
+            console.log(id_pjt);
+            nomePjt(id_pjt);
+            document.getElementById('meuPopup').showModal();
+        }
+
+        const editar = e.target.closest(".edtProjeto");
+        if (editar) {
+            const id = editar.dataset.id;
+            infoProjeto(id);
+            window.location = "edt_projeto.html?id=" + id;
+        }
+        document.getElementById("apagar").addEventListener("click", function(e){
+            apgProjeto(id_pjt);
+            document.getElementById('meuPopup').close();
+        });
+
+    });
+</script>
+</html>

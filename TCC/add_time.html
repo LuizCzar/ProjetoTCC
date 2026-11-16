@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="Img/logo/019125-removebg-preview.png" type="img/x-icon">
+    <link rel="stylesheet" href="login.css">
+    <title>Time | LinkIFBA</title>
+    <style>
+        #membro{
+          width: 200px;  
+        }
+    </style>
+</head>
+<body>
+
+  <div class="container" id="login">
+    <div class="logo">
+      <img src="img/logo/logo-comp2.png" alt="logo-comp2" id="lista" >
+    </div>
+    <div id="voltar-perfil"> </a>
+    </div>
+
+    <h2>Criar equipe</h2>
+    
+    <form action="teste.php" method="pos
+    t">
+      <div>
+          <label for="nome">Nome da equipe</label>
+          <input type="text" id="nome" name="nome" required />
+      </div>
+
+      <div>
+          <label for="membro">Membros:</label>
+          <input list="usuarios" id="membro" name="membro" placeholder="digite o email...">
+            <datalist id="usuarios"></datalist>
+          <button type="button" id="addt" >Add</button>
+      </div>
+
+      <div id="membro-conf">
+        <div class="balao"><span id="apelido"></span></div>
+      </div>
+      
+      <button id="confirmar">CONFIRMAR</button>
+    </form>
+
+    <footer>
+      © 2024-2026 LinkIFBA
+    </footer>
+
+  </div> 
+
+</body>
+</html>
+<script src="script.js"></script>
+<script>
+  getFotoVoltar();
+  listaEmail();
+</script>
+<script>
+    addt = document.getElementById("addt");
+    let lista = [];
+    addt.addEventListener("click", function(e){ 
+      membro = document.getElementById("membro").value 
+      addLista(membro);
+      document.getElementById("membro").value = "";
+    });
+   
+    document.getElementById("membro-conf").addEventListener("click", function(e) {
+      if (e.target.classList.contains("remover")) {
+        const id = e.target.dataset.id;
+        lista = lista.filter(nome => nome !== Number(id));
+        document.getElementById(id).remove();
+      }
+    });
+
+    
+    document.querySelector("form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      var nome = document.getElementById("nome").value
+      mandaLista(lista, nome);
+    });
+</script>

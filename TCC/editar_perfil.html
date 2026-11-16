@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="login.css">
+        <link rel="shortcut icon" href="Img/logo/019125-removebg-preview.png" type="img/x-icon">
+        <title>Editar Perfil | LinkIFBA</title>
+
+        <style>
+            #curso{
+                width: 157px;
+                font-size: 15px;
+            }
+
+            #turma{
+                width: 70px;
+                font-size: 15px;
+            }
+        </style> 
+
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo/logo-comp2.png" alt="logo-comp2">
+            </div>
+            
+            <div id="voltar-perfil"></div>
+
+            <h2>Editar Perfil</h2>
+
+            <form action="upload.php" method="POST" enctype="multipart/form-data">
+                <div class="imagem">
+                    <img id="preview" src="" alt="Prévia da imagem">
+                    <label for="foto" class="upload-btn">
+                        Escolher imagem
+                    </label>
+                    <input type="file" id="foto" name="foto" accept="image/*" hidden required>
+                    <button type="submit" class="salvar">Salvar foto</button>
+                </div>
+
+            </form>
+
+            <br>
+
+            <form action="editar_perfil.php" method="post" > 
+                
+                <!-- NOME -->
+                <div>
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required />
+                </div>
+
+                <div>
+                    <label for="apelido">Apelido</label>
+                    <input type="text" id="apelido" name="apelido" required />
+                </div>
+
+                <div class="curso_turma">
+                    <label for="curso">Curso</label>
+                    <select id="curso" name="curso">
+                        <option value="">Selecione</option>
+                    </select>
+                    
+                    <label for="turma">Turma</label>
+                    <input type="number" id="turma" name="turma" required min="1000" max="9999"/>
+                </div>
+
+                <div class="row">
+                    <div>
+                    <label for="turno">Turno</label>
+                    <select id="turno" name="turno">
+                        <option value="">Selecione</option>
+                        <option value="matutino">Matutino</option>
+                        <option value="vespertino">Vespertino</option>
+                        <option value="noturno">Noturno</option>
+                    </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="bio">Bio</label>
+                    <textarea id="bio" name="bio" placeholder="Fale um pouco sobre você..." rows="4" cols="30"></textarea>
+                </div>
+                
+                <button type="submit" class="sa">Salvar Alterações</button>
+            </form>
+
+            <footer>© 2024-2026 LinkIFBA</footer>
+        </div>
+
+    </body>
+    
+</html>
+<script src="script.js"></script>
+<script>
+    getFotoVoltar();
+    listarCurso();
+</script>

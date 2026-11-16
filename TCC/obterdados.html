@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="shortcut icon" href="Img/logo/019125-removebg-preview.png" type="img/x-icon"> 
+    <title>Perfil | LinkIFBA</title>
+</head>
+<body>
+    <header>
+    <a href="index.html"> <img class="logo" src="img/logo/logo-comp2.png" alt="logo-comp2"> </a>
+    </header>
+
+    <main class="container">
+
+        <!-- COLUNA ESQUERDA: PERFIL -->
+         <aside class="profile-card">
+            <div id="avatar"></div>
+            <h2 id="nome"></h2>
+            <p class="role" id="turma"></p>
+            <p class="university" id="turno"></p>
+            <p class="bio" id="bio"></p>
+            <br>
+            <div >
+                <h3 class="contato">CONTATOS</h3>
+                <div class="social">
+                    <img src="img/social/placa-do-github.png" alt="git hub"><p id="git">Não informado</p>
+                </div>
+                <div class="social">
+                    <img src="img/social/enviar.png" alt="gmail"><p id="gmail">Não informado</p>
+                </div>
+                <div class="social">
+                    <img src="img/social/instagram.png" alt="instagram"><p id="insta">Não informado</p>
+                </div>
+                <div class="social">
+                    <img src="img/social/whatsapp.png" alt="whatsapp"><p id="whats">Não informado</p>
+                </div>
+                <div class="social">
+                    <img src="img/social/facebook.png" alt="facebook"><p id="face">Não informado</p>
+                </div>
+
+            </div>
+        </aside>
+
+        <!-- COLUNA DIREITA -->
+        <section class="content">
+
+            <!-- PROJETOS -->
+             <h3>Meus Projetos</h3> 
+
+            <div id="project-grid" class="project-grid">
+                         
+            </div>
+
+            <!-- SKILLS -->
+            <h3>Habilidades</h3>
+
+            <div id="habil" class="skills"></div>
+
+
+        </section>
+
+    </main>
+
+    <footer>
+        © 2024 Global Academic Network
+    </footer>
+
+</body>
+
+<script src="script.js" ></script>
+<script>
+const queryString = window.location.search; // Retorna: "?id=123&nome=joao"
+const urlParams = new URLSearchParams(queryString);
+const id  = urlParams.get('user'); // Retorna: "123"
+getTodosDados(id);
+</script>
+</html>

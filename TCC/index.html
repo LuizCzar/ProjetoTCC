@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="Img/logo/019125-removebg-preview.png" type="img/x-icon"> 
+
+    <title>LinkIFBA</title> 
+</head>
+    <style>
+        #listar_usuario div{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+    </style>
+
+<body>
+    
+    <header>
+        <img class="logo" src="img/logo/logo-comp2.png" alt="logo-comp2">
+    </header>
+
+    <div id="perfil"></div>
+
+    <main class="container">
+        <div class="colab">
+        <h2>Colaboradores</h2>
+        <div id="logar"><a href="login.html">Login</a> | <a href="cadastro.html">Cadastro</a></div>
+        </div>
+        <div class="search-box">
+            <input id="nome" placeholder="Procure pelo nome">
+            <button id="bt-enviar">Enviar</button>
+        </div>
+
+        <div id="pagination" class="pagination">
+            
+        </div>
+
+        <section id="listar_usuario">
+            <div id="listausu-0">
+
+            </div>
+        </section>
+
+    </main>
+    
+    <footer>
+        <p>© 2024-2026 LinkIFBA</p>
+    </footer>
+
+</body>
+    <script src="script.js" ></script>
+    <script>
+
+    btn_enviar = document.getElementById("bt-enviar");
+
+    btn_enviar.addEventListener("click", function(e){
+        nome = document.getElementById("nome").value
+        console.log(nome);
+        getUsuario(nome);
+    });
+    document.addEventListener("DOMContentLoaded", verificarLogin);
+    </script>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="Img/logo/019125-removebg-preview.png" type="img/x-icon">
+    <link rel="stylesheet" href="login.css">
+    <title>Cadastro | LinkIFBA</title>
+    <style>
+            #curso{
+                width: 157px;
+                font-size: 15px;
+            }
+
+            #turma{
+                width: 70px;
+                font-size: 15px;
+            }
+        </style>    
+</head>    
+<body>
+ 
+    <div class="container">
+        <div class="logo">
+        <img src="img/logo/logo-comp2.png" alt="logo-comp2">
+        </div>
+
+        <h2>Criar Conta</h2>
+
+        <form action="cadastro.php" method="post">
+        <div>
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" name="nome" required />
+        </div>
+
+        <div>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required />
+        </div>
+
+        <div>
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" required />
+        </div>
+ 
+        <div class="curso_turma">
+                    <label for="curso">Curso</label>
+                    <select id="curso" name="curso">
+                        <option value="">Selecione</option>
+                    </select>
+                    
+                    <label for="turma">Turma</label>
+                    <input type="number" id="turma" name="turma" required min="1000" max="9999"/>
+                </div>
+
+        <div>
+                    <div>
+                    <label for="turno">Turno</label>
+                    <select id="turno" name="turno">
+                        <option value="">Selecione</option>
+                        <option value="matutino">Matutino</option>
+                        <option value="vespertino">Vespertino</option>
+                        <option value="noturno">Noturno</option>
+                    </select>
+                    </div>
+                </div>
+
+        <button type="submit">Cadastrar</button>
+        </form>
+
+        <div class="link">
+        Já tem conta? <a href="login.html">Entrar</a>
+        </div>
+
+        <footer>© 2024-2026 LinkIFBA</footer>
+    </div>
+
+</body>
+</html>
+<script src="script.js"></script>
+<script>
+    listarCurso();
+</script>
